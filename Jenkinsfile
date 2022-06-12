@@ -19,7 +19,8 @@ pipeline {
       echo "Job execution complete."
     }
     success {
-      archiveArtifacts artifacts: 'target/*'
+      archiveArtifacts artifacts: 'single-module/target/*'
+      archiveArtifacts artifacts: 'multi-module/target/*'
     }
     unsuccessful {
       echo "Job execution status is failed, please check error logs"
